@@ -1,3 +1,12 @@
+/*
+ * Created by Sathishkumar Durai
+ * Code Help 4 You
+ * Write to: sathish.codehelp4you@gmail.com
+ *
+ * This programs is to find the number of levels in a linked list and to flatten the same as a single linked list.
+ *
+ */
+
 #include<iostream>
 #include<stdlib.h>
 
@@ -11,14 +20,14 @@ struct node
 	int data;
 	struct node *next;
 	struct node *child;
-}; //DONOT FORGOT TO INCLUDE (;)
+};
 
 typedef struct node N;
 
 N *CreateList();
 void FlattenList(N*);
 void PrintList(N*);
-N *CreateSubList(int*,int); //ALWAYS IF ARRAY IS PASSED, THEN POINTER IS RECEIVED IN THE PARAMETER AND NOT THE WHOLE ARRAY. Eg. int* not as int[]
+N *CreateSubList(int*,int);
 
 /*Function to remove child and store it as a single list. Fattening level by level*/
 void FlattenList(N *root)
@@ -59,6 +68,7 @@ void FlattenList(N *root)
 	}
 }
 
+/*Function to print the List*/
 void PrintList(N *head)
 {
 	if(head == NULL)
@@ -88,7 +98,6 @@ N *CreateSubList(int *arr, int count)
 		}
 		else
 		{
-			//PLEASE USE YOUR HEAD. HOW CAN WE DECLARED P IF ITS ALREADY DECLARED. p = (N*)malloc(sizeof(N));
 			p->next = (N*)malloc(sizeof(N));
 			p = p->next;
 		}

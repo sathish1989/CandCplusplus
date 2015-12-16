@@ -1,3 +1,12 @@
+/*
+ * Created by Sathishkumar Durai
+ * Code Help 4 You
+ * Write to: sathish.codehelp4you@gmail.com
+ *
+ * This programs detects if there is any loop in the given single linked list.
+ *
+ */
+
 #include<stdio.h>
 #include<stdlib.h>
 using namespace std;
@@ -10,7 +19,6 @@ struct node
 
 typedef struct node N;
 
-//Always past the list as double pointer, so that the reference is not lost
 void Insert(N**,N*);
 void Display(N*);
 N* CreateNode(int);
